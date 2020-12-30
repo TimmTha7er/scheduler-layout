@@ -1,19 +1,23 @@
 .time-ruler {
-  // временно
-  // margin-top: 200px;
-  width: 55px;
-  box-shadow: 0 2px 3px 0 rgba(255, 255, 255, 0.5);
-  background-color: azure;
-  // временно
+  &__empty-row {
+    height: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-	// flex: none;
+    &_high {
+      height: 67px;
+    }
+  }
+
   &__cell {
     height: 56px;
     user-select: none;
+
+    &:first-child {
+      opacity: 0;
+    }
   }
 
   &__time {
-		// ????
     transform: translateY(-9px);
     font-size: 13px;
     text-align: center;
