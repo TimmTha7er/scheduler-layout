@@ -8,8 +8,13 @@
   </head>
   <body>
     <div class="container">
-      <main>
+      <main class="main">
         @@include('_datapicker.html')
+
+        <div class="dday">
+          @@include('_timeruler.html')
+          @@include('_daygrid.html')
+        </div>
       </main>
     </div>
     <script src="js/scripts.min.js"></script>

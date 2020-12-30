@@ -1,0 +1,21 @@
+.time-ruler {
+  // временно
+  // margin-top: 200px;
+  width: 55px;
+  box-shadow: 0 2px 3px 0 rgba(255, 255, 255, 0.5);
+  background-color: azure;
+  // временно
+
+	// flex: none;
+  &__cell {
+    height: 56px;
+    user-select: none;
+  }
+
+  &__time {
+		// ????
+    transform: translateY(-9px);
+    font-size: 13px;
+    text-align: center;
+  }
+}
