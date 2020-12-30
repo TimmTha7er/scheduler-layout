@@ -1,0 +1,50 @@
+<div class="popup">
+  <div class="popup__header">
+    <h2 class="popup__title">Новое событие</h2>
+    <div class="popup__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="close">
+        <path
+          d="M11.11 11.744l-.11-.11.11-.11L5 5.414 6.414 4l6.11 6.11L18.634 4l1.414 1.414-6.11 6.11.11.11-.11.11 6.11 6.11-1.414 1.415-6.11-6.11-6.11 6.11L5 17.854l6.11-6.11z"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </div>
+  </div>
+  <form class="form">
+    <div class="popup__content">
+      <div class="form__field">
+        <label class="form__label" for="">Название</label>
+        <input
+          class="form__input"
+          type="text"
+          autocomplete="off"
+          maxlength="120"
+        />
+      </div>
+
+      <div class="form__field">
+        <label class="form__label" for="">Описание</label>
+        <textarea
+          class="form__textarea"
+          cols="30"
+          rows="10"
+          maxlength="4000"
+        ></textarea>
+      </div>
+      <!-- <div class="form__field">
+        <label class="form__label" for="">Время</label>
+        <input
+          class="form__input"
+          type="text"
+          autocomplete="off"
+          maxlength="120"
+        />
+      </div> -->
+    </div>
+    <div class="popup__footer">
+			<button class="form__btn">
+				<span>Создать</span>
+			</button>
+		</div>
+  </form>
+</div>
