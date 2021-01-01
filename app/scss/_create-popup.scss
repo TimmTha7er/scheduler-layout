@@ -6,8 +6,8 @@
   width: 520px;
   padding: 14px 20px 14px 20px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 10px 20px -5px rgba(0, 0, 0, 0.4);
-	background-color: #fff;
-	z-index: 11;
+  background-color: #fff;
+  z-index: 21;
 
   &__header {
     display: flex;
@@ -16,16 +16,21 @@
   }
 
   &__title {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 22px;
+    line-height: 32px;
     font-weight: bold;
   }
 
   &__close {
-    font-size: 24px;
+    font-size: 32px;
     cursor: pointer;
     opacity: 0.3;
     transition: opacity 0.15s ease-out;
+    margin-right: -5px;
+
+    &:before {
+      margin: 0;
+    }
 
     &:hover {
       opacity: 1;
@@ -35,7 +40,7 @@
   &__footer {
     display: flex;
     justify-content: flex-end;
-    padding: 20px 20px 5px 120px;
+    padding: 20px 0px 5px 120px;
   }
 }
 
@@ -113,6 +118,43 @@
     }
     &:active {
       background-color: #ebcc4f;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .create-popup {
+    width: 97%;
+
+    &__header {
+      padding-bottom: 15px;
+    }
+
+    &__footer {
+      padding: 10px 0 5px 0px
+    }
+   
+  }
+
+  .form {
+    &__field {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    &__label {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .form {
+    &__btn {
+      padding-left: 0;
+      width: 100%;
     }
   }
 }

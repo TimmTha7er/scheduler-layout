@@ -1,9 +1,14 @@
 .datepicker {
-  // временно
+  position: absolute;
+  top: 65px;
+  left: 25px;
   max-width: 285px;
-  background-color: #f6f6f6;
-  padding: 0 24px 24px;
-  // временно
+  padding: 14px 24px 14px 24px;
+  z-index: 21;
+  opacity: 0;
+
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
 
   font-size: 13px;
   text-align: center;
@@ -22,26 +27,32 @@
   &__month-navigation {
     position: absolute;
     border: 0;
-    padding: 5px;
+    // display: block;
+    // padding: 5px;
     background: 0 0;
-    font-size: 15px;
+    font-size: 22px;
     cursor: pointer;
     user-select: none;
     z-index: 1;
-    opacity: 0;
+    // opacity: 0;
     transition: opacity 0.15s ease-out;
+
+    &:before {
+      margin: 0;
+      font-weight: 700;
+    }
 
     &:hover {
       opacity: 0.5 !important;
     }
 
     &_previous {
-      left: 0px;
+      left: -5px;
       top: 4px;
     }
 
     &_next {
-      right: 6px;
+      right: -5px;
       top: 4px;
     }
   }
@@ -50,13 +61,13 @@
     display: flex;
     position: relative;
     justify-content: center;
-    font-size: 15px;
-    font-weight: 700;
-    margin: 1px 0 8px 0;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 1px 0 12px 0;
   }
 
   &__selected-month {
-    margin-right: 4px;
+    margin-right: 8px;
     cursor: pointer;
     transition: color 0.15s ease-out;
 
@@ -80,14 +91,11 @@
 
   &__month-dropdown {
     position: absolute;
-
-    // временно
-    left: 100px;
-    top: 50px;
-    // временно
+    left: 54px;
+    top: 23px;
 
     background: #fff;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
 
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
@@ -97,8 +105,8 @@
   }
 
   &__month-name {
-    line-height: 24px;
-    padding: 0 13px;
+    line-height: 28px;
+    padding: 0 18px;
     transition: background-color 0.15s ease-out;
 
     &:hover {
@@ -112,14 +120,11 @@
 
   &__year-dropdown {
     position: absolute;
-
-    // временно
-    left: -20px;
-    top: 50px;
-    // временно
+    left: 120px;
+    top: 23px;
 
     background: #fff;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400;
 
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1),
@@ -129,8 +134,8 @@
   }
 
   &__year-option {
-    line-height: 24px;
-    padding: 0 13px;
+    line-height: 28px;
+    padding: 0 18px;
     transition: background-color 0.15s ease-out;
 
     &:hover {
@@ -143,24 +148,17 @@
   }
 
   &__navigation {
-    // box-sizing: initial;
-    // width: 7px;
-    // height: 13px;
-    padding: 5px;
-    // background-repeat: no-repeat;
-    // background-origin: content-box;
-    // background-size: 7px 13px;
     cursor: pointer;
     user-select: none;
-    // display: block;
-    // margin: 0 auto;
-    // background-image: url('../img/datepicker/arrow-left.svg');
+
+    &:before {
+      font-size: 18px;
+      font-weight: 700;
+    }
 
     &_years-upcoming {
-      // transform: rotate(90deg);
     }
     &_years-previous {
-      // transform: rotate(-90deg);
     }
   }
 
@@ -190,9 +188,9 @@
   }
 
   &__day {
-    width: 26px;
-    height: 26px;
-    padding: 7px;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
     color: rgb(0, 0, 0);
     font-weight: 700;
     border-radius: 50%;
@@ -227,3 +225,18 @@
     }
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .datepicker {
+    &__month-dropdown {
+      left: 44%;
+      transform: translate(-50%, 0%);
+    }
+
+    &__year-dropdown {
+      left: 58%;
+      transform: translate(-50%, 0%);
+    }
+  }
+}
+

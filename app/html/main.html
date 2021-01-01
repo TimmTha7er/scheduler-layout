@@ -8,21 +8,27 @@
   </head>
   <body>
     <div class="container">
+      <header class="header">
+        <div class="header__selected-date">
+          <div class="header__selected-month">декабрь</div>
+          <div class="header__selected-year">2020</div>
+        </div>
+        @@include('_datapicker.html')
+        @@include('_gridnav.html')
+      </header>
       <main class="main">
-        <div class="main__left-col">
-          @@include('_datapicker.html')
-        </div>
-        <div class="main__right-col">
-          @@include('_gridnav.html')
+
+          
           @@include('_day.html')
-        </div>
+       
        
 
         <!-- @@include('_daygrid.html') -->
        
 
-        @@include('_create-popup.html')
-        @@include('_delete-popup.html')
+        <!-- @@include('_create-popup.html') -->
+        <!-- @@include('_delete-popup.html') -->
+        <!-- @@include('_preview-popup.html') -->
 
       </main>
     </div>

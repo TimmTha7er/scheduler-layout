@@ -8,24 +8,27 @@
   </head>
   <body>
     <div class="container">
-      <main class="main">
-        <div class="main__left-col">
-          <div class="datepicker">
+      <header class="header">
+        <div class="header__selected-date">
+          <div class="header__selected-month">декабрь</div>
+          <div class="header__selected-year">2020</div>
+        </div>
+        <div class="datepicker header__datepicker">
   <div class="datepicker__header">
     <button
       type="button"
-      class="datepicker__month-navigation datepicker__month-navigation_previous icon icon-left-open"
+      class="datepicker__month-navigation datepicker__month-navigation_previous icon icon-left-open-big"
     ></button>
     <button
       type="button"
-      class="datepicker__month-navigation datepicker__month-navigation_next icon icon-right-open"
+      class="datepicker__month-navigation datepicker__month-navigation_next icon icon-right-open-big"
     ></button>
 
     <div class="datepicker__selected-date">
       <div class="datepicker__selected-month">декабрь</div>
       <div class="datepicker__selected-year">2020</div>
 
-      <div class="datepicker__month-dropdown">
+      <!-- <div class="datepicker__month-dropdown">
         <div class="datepicker__month-name">январь</div>
         <div class="datepicker__month-name">февраль</div>
         <div class="datepicker__month-name">март</div>
@@ -40,12 +43,12 @@
         <div class="datepicker__month-name datepicker__month-name_selected">
           декабрь
         </div>
-      </div>
+      </div> -->
 
       <div class="datepicker__year-dropdown">
         <div class="datepicker__year-option">
           <a
-            class="datepicker__navigation datepicker__navigation_years-upcoming icon icon-up-open"
+            class="datepicker__navigation datepicker__navigation_years-upcoming icon icon-up-open-big"
           ></a>
         </div>
         <div class="datepicker__year-option">2025</div>
@@ -63,7 +66,7 @@
         <div class="datepicker__year-option">2015</div>
         <div class="datepicker__year-option">
           <a
-            class="datepicker__navigation datepicker__navigation_years-previous icon icon-down-open"
+            class="datepicker__navigation datepicker__navigation_years-previous icon icon-down-open-big"
           ></a>
         </div>
       </div>
@@ -140,21 +143,23 @@
   </div>
 </div>
 
-        </div>
-        <div class="main__right-col">
-          <div class="gridnav">
+        <div class="gridnav header__gridnav">
   <button
-    class="gridnav__btn gridnav__btn_prev icon icon-left-open"
+    class="gridnav__btn gridnav__btn_prev icon icon-left-open-big"
     title="Предыдущий период"
   ></button>
   <button class="gridnav__btn gridnav__btn_today">Сегодня</button>
 
   <button
-    class="gridnav__btn gridnav__btn_next  icon icon-right-open"
+    class="gridnav__btn gridnav__btn_next  icon icon-right-open-big"
     title="Следующий период"
   ></button>
 </div>
 
+      </header>
+      <main class="main">
+
+          
           <div class="day">
 	<div class="day__left-col">
 		<div class="time-ruler">
@@ -254,24 +259,20 @@
 
   <div class="daygrid__rows">
     <div class="daygrid__row">
-      <div class="action-bar">
-        <button class="action-bar__btn">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            id="trash"
-          >
-            <g fill="none" fill-rule="evenodd">
-              <path
-                d="M5.809 3.243C5.903 2.85 6.077 2.12 6.24 2l3.55-.016c.168.136.347.877.444 1.275.054.23.116.484.194.74H5.61c.083-.268.144-.53.198-.756zM12.583 4c-.151-.171-.31-.814-.404-1.21C11.91 1.679 11.505 0 9.817 0H6.24C4.525 0 4.11 1.74 3.864 2.78c-.092.385-.262 1.103-.406 1.22H1v2h2v7.985C3 15.098 3.887 16 5 16h5.985A2.015 2.015 0 0013 13.985V6h2V4h-2.417z"
-                fill="currentColor"
-              ></path>
-            </g>
-          </svg>
-        </button>
+      <div class="grid-event">
+        Выбросить мусор! <br />
+        <!-- Выбросить мусор! <br />
+        Выбросить мусор!<br />
+        Выбросить мусор! -->
       </div>
     </div>
-    <div class="daygrid__row"></div>
+    <div class="daygrid__row">
+      <div class="action-bar">
+        <!-- <button class="action-bar__btn icon icon-plus-1"></button> -->
+        <!-- <button class="action-bar__btn icon icon-pencil"></button> -->
+        <!-- <button class="action-bar__btn icon icon-trash"></button> -->
+      </div>
+    </div>
     <div class="daygrid__row"></div>
     <div class="daygrid__row"></div>
     <div class="daygrid__row"></div>
@@ -299,71 +300,15 @@
 
 	</div>
 </div>
-        </div>
+       
        
 
         
        
 
-        <div class="create-popup">
-  <div class="create-popup__header">
-    <h2 class="create-popup__title">Новое событие</h2>
-    <div class="create-popup__close icon icon-cancel-1">
-      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="close">
-        <path
-          d="M11.11 11.744l-.11-.11.11-.11L5 5.414 6.414 4l6.11 6.11L18.634 4l1.414 1.414-6.11 6.11.11.11-.11.11 6.11 6.11-1.414 1.415-6.11-6.11-6.11 6.11L5 17.854l6.11-6.11z"
-          fill="currentColor"
-        ></path>
-      </svg> -->
-    </div>
-  </div>
-  <form class="form">
-    <div class="create-popup__content">
-      <div class="form__field">
-        <label class="form__label" for="">Название</label>
-        <input
-          class="form__input"
-          type="text"
-          autocomplete="off"
-          maxlength="120"
-        />
-      </div>
-
-      <div class="form__field">
-        <label class="form__label" for="">Описание</label>
-        <textarea
-          class="form__textarea"
-          cols="30"
-          rows="10"
-          maxlength="4000"
-        ></textarea>
-      </div>
-      <!-- <div class="form__field">
-        <label class="form__label" for="">Время</label>
-        <input
-          class="form__input"
-          type="text"
-          autocomplete="off"
-          maxlength="120"
-        />
-      </div> -->
-    </div>
-    <div class="create-popup__footer">
-      <button class="form__btn">
-        <span>Создать</span>
-      </button>
-    </div>
-  </form>
-</div>
-
-        <div class="delete-popup">
-	<div class="delete-popup__title">Удаление события</div>
-	<div class="delete-popup__text">Вы действительно хотите удалить событие?</div>
-	<div class="delete-popup__footer">
-		<button class="delete-popup__btn">Отмена</button>
-		<button class="delete-popup__btn delete-popup__btn_action">Да</button>
-	</div>
-</div>
+        
+        
+        
 
       </main>
     </div>
