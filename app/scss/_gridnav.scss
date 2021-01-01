@@ -7,7 +7,7 @@
 		margin-bottom: 12px;
 
   &__btn {
-    font-size: 15px;
+    font-size: 17px;
     padding: 10px 20px;
     border: solid 1px rgba(0, 0, 0, 0.2);
     background-color: #fff;
@@ -23,30 +23,31 @@
     }
 
     &_today {
+      font-size: 15px;
       border-left: none;
       border-right: none;
     }
 
     &_prev,
     &_next {
-      width: 35px;
+      // width: 35px;
       // height: 32px;
-      position: relative;
+      // position: relative;
 
       &:after {
         content: '';
         position: absolute;
-        top: 5px;
-        left: 9px;
-        width: 35px;
-        height: 32px;
-        background-size: 10px 17px;
+        // top: 5px;
+        // left: 9px;
+        // width: 35px;
+        // height: 32px;
+        // background-size: 10px 17px;
         border: 0;
-        padding: 5px;
-        background: 0 0;
-        background-image: url('../img/datepicker/arrow-left.svg');
-        background-repeat: no-repeat;
-        background-origin: content-box;
+        // padding: 5px;
+        // background: 0 0;
+        // background-image: url('../img/datepicker/arrow-left.svg');
+        // background-repeat: no-repeat;
+        // background-origin: content-box;
         cursor: pointer;
         user-select: none;
         z-index: 1;

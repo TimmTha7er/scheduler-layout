@@ -21,16 +21,10 @@
 
   &__month-navigation {
     position: absolute;
-    box-sizing: initial;
-    width: 10px;
-    height: 17px;
-    background-size: 10px 17px;
     border: 0;
     padding: 5px;
     background: 0 0;
-    background-image: url('../img/datepicker/arrow-left.svg');
-    background-repeat: no-repeat;
-    background-origin: content-box;
+    font-size: 15px;
     cursor: pointer;
     user-select: none;
     z-index: 1;
@@ -42,14 +36,13 @@
     }
 
     &_previous {
-      left: 3px;
+      left: 0px;
       top: 4px;
     }
 
     &_next {
-      right: 3px;
+      right: 6px;
       top: 4px;
-      transform: rotate(180deg);
     }
   }
 
@@ -150,24 +143,24 @@
   }
 
   &__navigation {
-    box-sizing: initial;
-    width: 7px;
-    height: 13px;
+    // box-sizing: initial;
+    // width: 7px;
+    // height: 13px;
     padding: 5px;
-    background-repeat: no-repeat;
-    background-origin: content-box;
-    background-size: 7px 13px;
+    // background-repeat: no-repeat;
+    // background-origin: content-box;
+    // background-size: 7px 13px;
     cursor: pointer;
     user-select: none;
-    display: block;
-    margin: 0 auto;
-    background-image: url('../img/datepicker/arrow-left.svg');
+    // display: block;
+    // margin: 0 auto;
+    // background-image: url('../img/datepicker/arrow-left.svg');
 
     &_years-upcoming {
-      transform: rotate(90deg);
+      // transform: rotate(90deg);
     }
     &_years-previous {
-      transform: rotate(-90deg);
+      // transform: rotate(-90deg);
     }
   }
 
