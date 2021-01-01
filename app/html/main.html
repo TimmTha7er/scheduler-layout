@@ -9,13 +9,20 @@
   <body>
     <div class="container">
       <main class="main">
-        <!-- @@include('_datapicker.html') -->
+        <div class="main__left-col">
+          @@include('_datapicker.html')
+        </div>
+        <div class="main__right-col">
+          @@include('_gridnav.html')
+          @@include('_day.html')
+        </div>
+       
 
         <!-- @@include('_daygrid.html') -->
-        <!-- @@include('_day.html') -->
+       
 
-        <!-- @@include('_popup.html') -->
-        @@include('_gridnav.html')
+        <!-- @@include('_create-popup.html') -->
+        @@include('_delete-popup.html')
 
       </main>
     </div>
