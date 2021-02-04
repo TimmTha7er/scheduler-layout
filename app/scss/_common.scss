@@ -14,22 +14,23 @@ body {
   display: none;
 }
 
-// (:hover, :focus, :active).
-// https://codepen.io/yurch-html/pen/qyaOZz
 .link {
   text-decoration: none;
-  color: #fff;
+  color: inherit;
   transition: color 0.25s ease;
+  outline: none;
 
   &:link {
+    outline: none;
   }
   &:visited {
+    // outline: none;
   }
   &:hover {
-    color: $accent-color;
+    // color: $accent-color;
   }
   &:active {
-    color: $accent-color;
+    // color: $accent-color;
   }
 }
 
